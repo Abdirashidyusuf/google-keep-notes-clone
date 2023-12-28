@@ -1,0 +1,104 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body{
+    font-family: 'Inter', sans-serif;
+ }
+
+ .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+ }
+
+ .container .note-area{
+    width: 600px;
+    background: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+ }
+
+ .note-area .title{
+    padding: 10px;
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+ }
+
+ .note-text{
+    padding: 10px 15px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    display: none;
+ }
+
+.container .notes{
+    position: relative;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.notes .note{
+    position: relative;
+    margin-top: 20px;
+    vertical-align: middle;
+    width: 270px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+}
+
+.note .note-blog{
+    padding-bottom: 25px;
+    word-wrap: break-word;
+}
+
+.note i.fa-trash{
+    visibility: hidden;
+}
+.note i.show{
+    position: relative;
+    top: 90%;
+    left: 90%;
+    color: cadetblue;
+    font-size: 40px;
+    visibility: visible;
+}
+
+.note-now{
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+}
+
+.note:hover{
+    box-shadow: 0px 2px 10px rgba(71,71,71,0.4);
+}
+
+@media only screan and (max-width:600px){
+    .notes{
+        grid-template-columns: 1fr;
+    }
+}
